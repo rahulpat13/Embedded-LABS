@@ -1,0 +1,95 @@
+Optimizing Linkage Editor (V.10.02.00.000)        06-Dec-2015 15:26:06
+
+*** Options ***
+
+-subcommand=C:\WorkSpace\gradlab\gradlab\Debug\gradlab.hlk
+-noprelink
+-rom=D=R,D_1=R_1,D_2=R_2
+-nomessage
+-vect=_undefined_interrupt_source_isr
+-list="C:\WorkSpace\gradlab\gradlab\Debug\gradlab.map"
+-nooptimize
+-start=SI,SU,B_1,R_1,B_2,R_2,B,R/00,C_1,C_2,C,C$*,L*,D*,P,W*/0FFF80000,FIXEDVECT/0FFFFFF90
+-nologo
+-input="C:\WorkSpace\gradlab\gradlab\Debug\cmt_periodic_multi.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\customled.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\dbsct.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\flash_led.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\flash_options.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\font_8x8.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\glyph.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\hwsetup.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\int.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\lcd.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\lowlvl.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\lowsrc.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\r_glyph.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\r_glyph_register.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\r_rspi_rx600.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\resetprg.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\S12ADC.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\sbrk.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\st7579_lcd.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\timer_adc.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\tutorial_main.obj"
+-input="C:\WorkSpace\gradlab\gradlab\Debug\vecttbl.obj"
+-library="C:\WorkSpace\gradlab\gradlab\Debug\gradlab.lib"
+-output="C:\WorkSpace\gradlab\gradlab\Debug\gradlab.abs"
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SI
+                                  00000000  000003ff       400   4
+SU
+                                  00000400  000013ff      1000   4
+B_1
+                                  00001400  00001427        28   1
+R_1
+                                  00001428  0000148b        64   1
+B_2
+                                  0000148c  0000148c         0   2
+R_2
+                                  0000148c  0000148d         2   2
+B
+                                  00001490  000018e7       458   4
+R
+                                  000018e8  00001f7f       698   4
+$ADDR_C_FF7FFFE8
+                                  ff7fffe8  ff7fffff        18   1
+C_1
+                                  fff80000  fff80adb       adc   1
+C_2
+                                  fff80adc  fff80cdd       202   2
+C
+                                  fff80ce0  fff80d97        b8   4
+C$DSEC
+                                  fff80d98  fff80dbb        24   4
+C$BSEC
+                                  fff80dbc  fff80dd3        18   4
+C$VECT
+                                  fff80dd4  fff811d3       400   4
+L
+                                  fff811d4  fff812bc        e9   4
+D
+                                  fff812c0  fff81957       698   4
+D_2
+                                  fff81958  fff81959         2   2
+D_1
+                                  fff8195a  fff819bd        64   1
+P
+                                  fff819be  fff85897      3eda   1
+W
+                                  fff85898  fff85898         0   4
+W_1
+                                  fff85898  fff858a3         c   1
+W_2
+                                  fff858a4  fff859c7       124   2
+$ADDR_C_FFFFFF80
+                                  ffffff80  ffffff8f        10   1
+FIXEDVECT
+                                  ffffff90  ffffffff        70   4

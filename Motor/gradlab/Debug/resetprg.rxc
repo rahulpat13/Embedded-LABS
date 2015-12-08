@@ -1,0 +1,16 @@
+-cpu=rx600
+-lang=c99
+-include="C:\WorkSpace\gradlab\gradlab\r_bsp"
+-include="C:\WorkSpace\gradlab\gradlab\r_glyph"
+-include="C:\WorkSpace\gradlab\gradlab\r_glyph\src"
+-include="C:\WorkSpace\gradlab\gradlab\r_glyph\src\glyph"
+-include="C:\WorkSpace\gradlab\gradlab\r_rspi_rx600"
+-include="C:\WorkSpace\gradlab\gradlab\r_rspi_rx600\src"
+-include="C:\WorkSpace\gradlab\gradlab\r_switches"
+-include="C:\WorkSpace\gradlab\gradlab\r_switches\src"
+-include="C:\WorkSpace\gradlab\gradlab\src"
+-output=obj="C:\WorkSpace\gradlab\gradlab\Debug\resetprg.obj"
+-debug
+-speed
+"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\resetprg.c"
+-nologo

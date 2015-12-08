@@ -1,0 +1,93 @@
+Optimizing Linkage Editor (V.10.02.00.000)        30-Oct-2015 18:40:24
+
+*** Options ***
+
+-subcommand=C:\WorkSpace\lab5\lab5\Debug\lab5.hlk
+-noprelink
+-rom=D=R,D_1=R_1,D_2=R_2
+-nomessage
+-vect=_undefined_interrupt_source_isr
+-list="C:\WorkSpace\lab5\lab5\Debug\lab5.map"
+-nooptimize
+-start=SI,SU,B_1,R_1,B_2,R_2,B,R/00,C_1,C_2,C,L*,C$*,D*,PResetPRG,P,W*/0FFFC0000,FIXEDVECT/0FFFFFF90
+-nologo
+-input="C:\WorkSpace\lab5\lab5\Debug\customADC.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\dbsct.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\flash_options.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\font_8x8.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\glyph.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\hwsetup.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\lcd.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\lowlvl.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\lowsrc.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\main.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\r_glyph.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\r_glyph_register.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\r_rspi_rx600.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\r_switches.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\resetprg.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\sbrk.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\st7579_lcd.obj"
+-input="C:\WorkSpace\lab5\lab5\Debug\vecttbl.obj"
+-library="C:\WorkSpace\lab5\lab5\Debug\lab5.lib"
+-output="C:\WorkSpace\lab5\lab5\Debug\lab5.abs"
+-end
+
+*** Error information ***
+
+** L1100 (W) Cannot find "PResetPRG" specified in option "start"
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SI
+                                  00000000  000003ff       400   4
+SU
+                                  00000400  000013ff      1000   4
+B_1
+                                  00001400  00001427        28   1
+R_1
+                                  00001428  0000147e        57   1
+B_2
+                                  00001480  00001480         0   2
+R_2
+                                  00001480  00001480         0   2
+B
+                                  00001480  000018f7       478   4
+R
+                                  000018f8  00001f6f       678   4
+$ADDR_C_FF7FFFE8
+                                  ff7fffe8  ff7fffff        18   1
+C_1
+                                  fffc0000  fffc0ad1       ad2   1
+C_2
+                                  fffc0ad2  fffc0cd3       202   2
+C
+                                  fffc0cd4  fffc0d8b        b8   4
+L
+                                  fffc0d8c  fffc0eb8       12d   4
+C$DSEC
+                                  fffc0ebc  fffc0edf        24   4
+C$BSEC
+                                  fffc0ee0  fffc0ef7        18   4
+C$VECT
+                                  fffc0ef8  fffc12f7       400   4
+D
+                                  fffc12f8  fffc196f       678   4
+D_2
+                                  fffc1970  fffc1970         0   2
+D_1
+                                  fffc1970  fffc19c6        57   1
+P
+                                  fffc19c7  fffc5547      3b81   1
+W_1
+                                  fffc5548  fffc5548         0   1
+W_2
+                                  fffc5548  fffc5619        d2   2
+W
+                                  fffc561c  fffc561c         0   4
+$ADDR_C_FFFFFF80
+                                  ffffff80  ffffff8f        10   1
+FIXEDVECT
+                                  ffffff90  ffffffff        70   4

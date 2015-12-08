@@ -1,0 +1,5 @@
+"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\lowlvl.src"
+-cpu=rx600
+-debug
+-output="C:\WorkSpace\gradlab\gradlab\Debug\lowlvl.obj"
+-nologo

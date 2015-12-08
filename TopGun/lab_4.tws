@@ -1,0 +1,31 @@
+[HIMDBVersion]
+2.0
+[DATABASE_VERSION]
+"1.2" 
+[CURRENT_PROJECT]
+"lab_4" 
+[GENERAL_DATA]
+[BREAKPOINTS]
+[OPEN_WORKSPACE_FILES]
+"C:\WorkSpace\lab_4\lab_4\r_bsp\board\rdkrx63n\lcd.c" 
+"C:\WorkSpace\lab_4\lab_4\r_bsp\board\rdkrx63n\resetprg.c" 
+"C:\WorkSpace\lab_4\lab_4\r_glyph\src\r_glyph.c" 
+"C:\WorkSpace\lab_4\lab_4\r_rspi_rx600\src\r_rspi_rx600.c" 
+"C:\WorkSpace\lab_4\lab_4\src\S12ADC.c" 
+"C:\WorkSpace\lab_4\lab_4\src\S12ADC.h" 
+"C:\WorkSpace\lab_4\lab_4\src\timer_adc.c" 
+"C:\WorkSpace\lab_4\lab_4\src\timer_adc.h" 
+"C:\WorkSpace\lab_4\lab_4\src\tutorial_main.c" 
+[WORKSPACE_FILE_STATES]
+"C:\WorkSpace\lab_4\lab_4\r_bsp\board\rdkrx63n\lcd.c" 0 0 1000 345 0 6 
+"C:\WorkSpace\lab_4\lab_4\r_bsp\board\rdkrx63n\resetprg.c" 26 26 906 228 0 5 
+"C:\WorkSpace\lab_4\lab_4\r_glyph\src\r_glyph.c" 0 0 906 228 0 4 
+"C:\WorkSpace\lab_4\lab_4\r_rspi_rx600\src\r_rspi_rx600.c" 0 0 914 364 0 3 
+"C:\WorkSpace\lab_4\lab_4\src\S12ADC.c" 0 0 1000 364 0 7 
+"C:\WorkSpace\lab_4\lab_4\src\S12ADC.h" 78 78 880 221 0 8 
+"C:\WorkSpace\lab_4\lab_4\src\timer_adc.c" 26 26 906 228 0 2 
+"C:\WorkSpace\lab_4\lab_4\src\timer_adc.h" 0 0 906 228 0 1 
+"C:\WorkSpace\lab_4\lab_4\src\tutorial_main.c" -8 -31 1000 364 1 0 
+[LOADED_PROJECTS]
+"lab_4" 
+[END]
