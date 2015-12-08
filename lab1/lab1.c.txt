@@ -1,0 +1,71 @@
+/*
+ * LAB 1 code by Rahul Patil and Raj Sheth for ECGR5101
+ */
+
+
+#include <msp430.h> 
+
+/*
+ * main.c
+ */
+int main(void) {
+    WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
+    P1DIR |= 0x41; // Set P1.0 and P1.6 to output direction
+    P1REN |= 0X08; //Enables pull-up/pull down resistor for P1.3
+    P1OUT |= 0X08; //Sets the pull-up for P1.3
+
+    volatile unsigned int flag;
+    flag = 0;
+    volatile unsigned int flag2;
+    flag2 = 0;
+    volatile unsigned int i;
+
+    for(;;) {
+    	 	 P1REN |= 0X08; //Enables pull-up/pull down resistor for P1.3
+    	 	 P1OUT |= 0X08; //Sets the pull-up for P1.3
+    	    i = 0;
+//    	    if button is pressed, start counter
+//    	    if count is greater than threshold, it's a long press
+//    	    else it's a short press.
+
+    	if(!(P1IN & 0x08)){
+    	do{
+    		i++;
+    	}
+    	while(!(P1IN & 0x08));
+    	if(i > 30000){
+    		flag2 = 1 - flag2; // flag2 keeps track of long press
+    		_delay_cycles(10000);
+    	}
+    	else{
+    		flag = 1 - flag; //flag keeps track of short press
+    	}
+    	}
+//    	if it is a short press then toggle LEDs
+    	if(flag2 == 0){
+//    		Code for toggling LED1
+    		      		__delay_cycles(100000);
+    		        	if(flag == 0){
+    		        		P1OUT ^= 0x01;
+    		      		__delay_cycles(100000);
+    		        	}
+    		        	else{
+    		      		__delay_cycles(100000);
+    		      		}
+    	}
+    	else{
+//    		Code for toggling LED2
+    		      		__delay_cycles(100000);
+    		        	if(flag == 0){
+    		        		P1OUT ^= 0x40;
+    		        		__delay_cycles(100000);
+    		        	}
+    		        	else{
+    		        	_delay_cycles(100000);
+
+    		        	}
+    	}
+    }
+	return 0;
+}
+
