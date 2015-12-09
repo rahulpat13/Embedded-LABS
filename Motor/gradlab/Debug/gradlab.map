@@ -1,4 +1,4 @@
-Optimizing Linkage Editor (V.10.02.00.000)        06-Dec-2015 15:26:06
+Optimizing Linkage Editor (V.10.02.00.000)        08-Dec-2015 19:50:16
 
 *** Options ***
 
@@ -82,13 +82,13 @@ D_2
 D_1
                                   fff8195a  fff819bd        64   1
 P
-                                  fff819be  fff85897      3eda   1
+                                  fff819be  fff85870      3eb3   1
 W
-                                  fff85898  fff85898         0   4
+                                  fff85874  fff85874         0   4
 W_1
-                                  fff85898  fff858a3         c   1
+                                  fff85874  fff85874         0   1
 W_2
-                                  fff858a4  fff859c7       124   2
+                                  fff85874  fff85997       124   2
 $ADDR_C_FFFFFF80
                                   ffffff80  ffffff8f        10   1
 FIXEDVECT

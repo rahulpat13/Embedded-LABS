@@ -143,90 +143,9 @@ void main(void)
 	LED_Off(0);
     /* Executes the static variable test */
     //statics_test();
-
+	
     while (1)
-    {
-		if(waveDriveFlag == 1){
-	        switch(count){
-	            case 1: 
-					LED_Off(0);
-	                phase1_ON();
-	                break;
-	            case 2:
-					LED_Off(0);
-	                phase2_ON();
-	                phase1_OFF();
-	                break;
-	            case 3:
-					LED_Off(0);
-	                phase3_ON();
-	                phase2_OFF();
-	                break;
-	            case 4:
-					LED_Off(0);
-	                phase4_ON();
-	                phase3_OFF();
-	                break;
-	            case 5:
-					LED_Off(0);
-	                phase5_ON();
-	                phase4_OFF();
-	                break;
-	            case 6:
-					LED_Off(0);
-	                phase6_ON();
-	                phase5_OFF();
-	                break;
-				default:
-	            	break;
-
-	        }
-		}
-		
-		if(fullStepFlag == 1){
-	        switch(count){
-	            case 1: 
-					LED_Off(0);
-	                phase1_ON();
-					phase2_ON();
-	                break;
-	            case 2:
-					LED_Off(0);
-	                phase2_ON();
-					phase3_ON();
-	                phase1_OFF();
-	                break;
-	            case 3:
-					LED_Off(0);
-	                phase3_ON();
-					phase4_ON();
-	                phase2_OFF();
-	                break;
-	            case 4:
-					LED_Off(0);
-	                phase4_ON();
-					phase5_ON();
-	                phase3_OFF();
-	                break;
-	            case 5:
-					LED_Off(0);
-	                phase5_ON();
-					phase6_ON();
-	                phase4_OFF();
-	                break;
-	            case 6:
-					LED_Off(0);
-	                phase6_ON();
-					phase1_ON();
-	                phase5_OFF();
-	                break;
-				default:
-	            	break;
-
-	        }
-		}
-
-        if(halfStepFlag == 1){
+    {	
             switch(count){
                 case 1: 
                     LED_Off(0);
@@ -285,7 +204,7 @@ void main(void)
                 default:
                     break;
             }
-        }
+        
     }
 } /* End of function main(). */
 
