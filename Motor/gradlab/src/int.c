@@ -79,6 +79,7 @@ void int_isr (void){
 		if(count > 12){
 			count = 1;
 		}
+		LED_Off(0);
 	}
 	else if(directionFlag == 1){
 		if(waveDriveFlag == 1 || fullStepFlag == 1){
@@ -90,6 +91,7 @@ void int_isr (void){
 		if(count < 1){
 			count = 12;
 		}
+		LED_Off(0);
 	}
 }
 
@@ -104,6 +106,7 @@ void sw1_isr (void){
 	fullStepFlag = 0;
 	halfStepFlag = 0;
 	count = 1;
+	lcd_display(LCD_LINE3, "Wave Drive");
 }
 
 
@@ -112,7 +115,9 @@ void sw2_isr (void){
 	waveDriveFlag = 0;
 	fullStepFlag = 1;
 	halfStepFlag = 0;
+//	count = 1;
 	count = 2;
+	lcd_display(LCD_LINE3, "Full Step");
 }
 
 #pragma interrupt (sw3_isr (vect = VECT(ICU, IRQ12)))
@@ -121,5 +126,5 @@ void sw3_isr (void){
 	fullStepFlag = 0;
 	halfStepFlag = 1;
 	count = 1;
+	lcd_display(LCD_LINE3, "Half Step");
 }
-

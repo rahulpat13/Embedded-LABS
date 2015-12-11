@@ -64,7 +64,10 @@ Includes   <System Includes> , "Project Includes"
 *******************************************************************************/
 #include <stdint.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <machine.h>
 #include <string.h>
+#include <stdlib.h>
 #include "platform.h" 
 #include "r_switches.h"
 #include "cmt_periodic_multi.h"
@@ -72,6 +75,12 @@ Includes   <System Includes> , "Project Includes"
 #include "flash_led.h"
 #include "customled.h"
 #include "int.h"
+#include "r_riic_rx600.h"
+#include "r_riic_rx600_master.h"
+// #include "cmt_periodic.h"
+#include "riic_master_main.h"
+#include "temp_sensor.h"
+
 /*******************************************************************************
 Macro Definitions
 *******************************************************************************/
@@ -88,13 +97,15 @@ uint8_t g_working_string[13] = "   STATIC   "; /* 12 characters plus NULL termin
 
 /* Statics test const variable */
 const uint8_t g_replacement_str[] = "TEST TEST"; /* Must be 12 chars or less. */
-
+void temperature_display (void);
+int16_t thermal_sensor_read(void);
 volatile bool g_sw1_press = false;
 volatile bool g_sw2_press = false;
 volatile bool g_sw3_press = false;
 volatile unsigned int count = 1;
 volatile unsigned int waveDriveFlag = 1;
 volatile unsigned int fullStepFlag = 0;
+volatile unsigned int temperaturevalue = 0;
 volatile unsigned int halfStepFlag = 0;
 /*******************************************************************************
 Private function prototypes and global variables
@@ -104,6 +115,8 @@ static void timer_callback(void);
 
 volatile static bool g_delay_complete = false;
 
+static riic_ret_t riic_master_init(void);
+static bool g_thermal_sensor_good = false;
 
 /******************************************************************************
 * Function name: main
@@ -139,13 +152,180 @@ void main(void)
     //flash_led();  
 
     /* Initiates the ADC-varying LED flash sequence */ 
-    timer_adc();
-	LED_Off(0);
+   // timer_adc();
+	//LED_Off(0);
     /* Executes the static variable test */
     //statics_test();
 	
+	riic_ret_t iic_ret = RIIC_OK;
+ 	iic_ret |= riic_master_init();
+    while (RIIC_OK != iic_ret)
+    {
+        nop(); /* Failure to initialize here means demo can not proceed. */    
+    }
+
+    /* Some boards may not have the thermal sensor present. This sequence 
+       demonstrates an example of how to recover from some bus error conditions. */
+    iic_ret |= thermal_sensor_init();    /* Initialize IIC thermal sensor */
+   
+    if (RIIC_OK == iic_ret)
+    {
+        g_thermal_sensor_good = true;
+    }
+    /* Thermal sensor not present or malfunctioning. Remove it from the demo. */ 
+    else  
+    {   /* Got a NACK. */
+        g_thermal_sensor_good = false;  
+          
+        iic_ret = R_RIIC_Reset(RIIC_CHANNEL); /* Do soft reset to clean up bus states. */
+        
+        if (RIIC_RESET_ERR & iic_ret) /* Check for successful IIC soft-reset. */
+        {   /* Soft-reset failed. Need to do complete re-initialization. */
+            /* Need to release the channel first berfore it can be re-initialized. */
+            R_RIIC_ReleaseChannel(RIIC_CHANNEL);    
+            iic_ret = riic_master_init(); 
+        }
+        
+        while (RIIC_OK != iic_ret)
+        {
+            nop(); /* Failure to initialize here means demo can not proceed. */
+        }               
+    }
+	
+	LED_Off(0);
+
     while (1)
     {	
+		//LED_Off(0);
+		temperaturevalue = thermal_sensor_read();
+		if(temperaturevalue < 280)
+{
+	/*	if(waveDriveFlag == 1){
+			lcd_display(LCD_LINE3, "Wave Drive");
+	        switch(count){
+	            case 1: 
+					LED_Off(0);
+					//LED_On(4);
+					//LED_On(5);
+
+	                phase1_ON();
+	                break;
+	            case 3:
+					//LED_Off(0);
+					LED_On(6);
+					LED_On(7);
+	            //    phase2_ON();
+	                //phase1_OFF();
+	                break;
+	            case 5:
+					//LED_Off(0);
+	                LED_On(8);
+					LED_On(9);
+				//	phase3_ON();
+	                //phase2_OFF();
+	                break;
+	            case 7:
+					//LED_Off(0);
+					LED_On(10);
+					LED_On(11);
+
+	              //  phase4_ON();
+	                //phase3_OFF();
+	                break;
+	            case 9:
+					//LED_Off(0);
+					LED_On(12);
+					LED_On(13);
+
+	               // phase5_ON();
+	                //phase4_OFF();
+	                break;
+	            case 11:
+					//LED_Off(0);
+					LED_On(14);
+					LED_On(15);
+
+	                //phase6_ON();
+	                //phase5_OFF();
+	                break;
+				default:
+	            	break;
+
+	        }
+		}
+		
+		if(fullStepFlag == 1){
+			lcd_display(LCD_LINE3, "Full Step");
+	        switch(count){
+	            case 1: 
+					//LED_Off(0);
+					LED_On(4);
+					LED_On(5);
+					LED_On(6);
+					LED_On(7);
+
+					
+	                //phase1_ON();
+					//phase2_ON();
+	                break;
+	            case 3:
+					//LED_Off(0);
+					LED_On(6);
+					LED_On(7);
+					LED_On(8);
+					LED_On(9);
+	               // phase2_ON();
+				//	phase3_ON();
+	                //phase1_OFF();
+	                break;
+	            case 5:
+					//LED_Off(0);
+					LED_On(8);
+					LED_On(9);
+					LED_On(10);
+					LED_On(11);
+	                //phase3_ON();
+					//phase4_ON();
+	                //phase2_OFF();
+	                break;
+	            case 7:
+					//LED_Off(0);
+					LED_On(10);
+					LED_On(11);
+					LED_On(12);
+					LED_On(13);
+	          //      phase4_ON();
+				//	phase5_ON();
+	                //phase3_OFF();
+	                break;
+	            case 9:
+					//LED_Off(0);
+					LED_On(12);
+					LED_On(13);
+					LED_On(14);
+					LED_On(15);
+//	                phase5_ON();
+//					phase6_ON();
+	               // phase4_OFF();
+	                break;
+	            case 11:
+					//LED_Off(0);
+					LED_On(14);
+					LED_On(15);
+					LED_On(4);
+					LED_On(5);
+//	                phase6_ON();
+//					phase1_ON();
+	                //phase5_OFF();
+	                break;
+				default:
+	            	break;
+
+	        }
+		}
+*/
+      //  if(halfStepFlag == 1){
+//			lcd_display(LCD_LINE3, "Half Step");
             switch(count){
                 case 1: 
                     LED_Off(0);
@@ -204,7 +384,14 @@ void main(void)
                 default:
                     break;
             }
-        
+      //  }
+		
+		}
+	else{
+			LED_Off(0);
+			lcd_display(LCD_LINE3, "Overheat");
+	}
+	
     }
 } /* End of function main(). */
 
@@ -311,4 +498,28 @@ void sw3_callback(void)
 {
     g_sw3_press = true; /* The switch was pressed. */
 } /* End of function sw3_callback() */
+
+/*******************************************************************************
+* Function name: riic_master_init
+* Description  : Prepare an RIIC channel for master mode communications used in the demo
+* Arguments    : none
+* Return value : riic_ret_t -
+*                   RIIC result code
+*******************************************************************************/
+static riic_ret_t riic_master_init(void) 
+{ 
+    /* Initialize a data structure used by the R_RIIC_Init() API function. */
+    /* See r_riic_rx600.h for definitions of this structure. */
+    riic_config_t   riic_master_config = {RIIC_CHANNEL, RIIC_MASTER_CONFIG, 
+                                          0, 
+                                          0, 
+                                          0, 
+                                          0, 
+                                          MASTER_IIC_ADDRESS_LO, 
+                                          MASTER_IIC_ADDRESS_HI}; 
+
+    /* Initialize the RIIC channel for communication with the accelerometer. */
+    return R_RIIC_Init(&riic_master_config);
+}
+
 
