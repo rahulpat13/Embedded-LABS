@@ -3,13 +3,13 @@
 [DATABASE_VERSION]
 "2.8" 
 [PROJECT_DETAILS]
-"gradlab" "C:\WorkSpace\gradlab\gradlab" "C:\WorkSpace\gradlab\gradlab\gradlab.hwp" "RX" "Renesas RX Standard" "Application" "" "" 
+"gradlab" "D:\Embedded\LABS\Motor\gradlab" "D:\Embedded\LABS\Motor\gradlab\gradlab.hwp" "RX" "Renesas RX Standard" "Application" "" "" 
 [INFORMATION]
 "No project information available" 
 [TOOL_CHAIN]
 "Renesas RX Standard Toolchain" "1.2.0.0" 
 [CONFIGURATIONS]
-"Debug" "C:\WorkSpace\gradlab\gradlab\Debug" 
+"Debug" "D:\Embedded\LABS\Motor\gradlab\Debug" 
 [BUILD_PHASES]
 "Renesas OptLinker" 1 
 "Renesas RX Assembler" 1 
@@ -115,31 +115,31 @@
 "Object file" "Renesas OptLinker" "Renesas RX Assembler" 
 "Object file" "Renesas OptLinker" "Renesas RX C/C++ Compiler" 
 [PROJECT_FILES]
-"C:\WorkSpace\gradlab\gradlab\Docs\ecosystems.html" "User" "Ecosystem" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\dbsct.c" "User" "BSP" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\flash_options.c" "User" "BSP" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\hwsetup.c" "User" "BSP" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\lcd.c" "User" "BSP" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\lowlvl.src" "User" "Assembly source file" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\lowsrc.c" "User" "BSP" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\resetprg.c" "User" "BSP" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\sbrk.c" "User" "BSP" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\vecttbl.c" "User" "BSP" 2 
-"C:\WorkSpace\gradlab\gradlab\r_glyph\src\glyph\drivers\st7579_lcd.c" "User" "R Packages|LCD" 2 
-"C:\WorkSpace\gradlab\gradlab\r_glyph\src\glyph\fonts\font_8x8.c" "User" "R Packages|LCD" 2 
-"C:\WorkSpace\gradlab\gradlab\r_glyph\src\glyph\glyph.c" "User" "R Packages|LCD" 2 
-"C:\WorkSpace\gradlab\gradlab\r_glyph\src\r_glyph.c" "User" "R Packages|LCD" 2 
-"C:\WorkSpace\gradlab\gradlab\r_glyph\src\r_glyph_register.c" "User" "R Packages|LCD" 2 
-"C:\WorkSpace\gradlab\gradlab\r_rspi_rx600\src\r_rspi_rx600.c" "User" "R Packages|RSPI" 2 
-"C:\WorkSpace\gradlab\gradlab\src\S12ADC.c" "User" "C source file" 2 
-"C:\WorkSpace\gradlab\gradlab\src\cmt_periodic_multi.c" "User" "C source file" 2 
-"C:\WorkSpace\gradlab\gradlab\src\customled.c" "User" "C source file" 2 
-"C:\WorkSpace\gradlab\gradlab\src\customled.h" "User" "C header file" 2 
-"C:\WorkSpace\gradlab\gradlab\src\flash_led.c" "User" "C source file" 2 
-"C:\WorkSpace\gradlab\gradlab\src\int.c" "User" "C source file" 2 
-"C:\WorkSpace\gradlab\gradlab\src\int.h" "User" "C header file" 2 
-"C:\WorkSpace\gradlab\gradlab\src\timer_adc.c" "User" "C source file" 2 
-"C:\WorkSpace\gradlab\gradlab\src\tutorial_main.c" "User" "C source file" 2 
+"D:\Embedded\LABS\Motor\gradlab\Docs\ecosystems.html" "User" "Ecosystem" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\dbsct.c" "User" "BSP" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\flash_options.c" "User" "BSP" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\hwsetup.c" "User" "BSP" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\lcd.c" "User" "BSP" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\lowlvl.src" "User" "Assembly source file" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\lowsrc.c" "User" "BSP" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\resetprg.c" "User" "BSP" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\sbrk.c" "User" "BSP" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\vecttbl.c" "User" "BSP" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_glyph\src\glyph\drivers\st7579_lcd.c" "User" "R Packages|LCD" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_glyph\src\glyph\fonts\font_8x8.c" "User" "R Packages|LCD" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_glyph\src\glyph\glyph.c" "User" "R Packages|LCD" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_glyph\src\r_glyph.c" "User" "R Packages|LCD" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_glyph\src\r_glyph_register.c" "User" "R Packages|LCD" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_rspi_rx600\src\r_rspi_rx600.c" "User" "R Packages|RSPI" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\S12ADC.c" "User" "C source file" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\cmt_periodic_multi.c" "User" "C source file" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\customled.c" "User" "C source file" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\customled.h" "User" "C header file" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\flash_led.c" "User" "C source file" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\int.c" "User" "C source file" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\int.h" "User" "C header file" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\timer_adc.c" "User" "C source file" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\tutorial_main.c" "User" "C source file" 2 
 [FOLDER]
 "Assembly source file" "Assembly source file" 
 "BSP" "BSP" 
@@ -155,40 +155,40 @@
 [ON_DEMAND_COMPONENTS_LOADED]
 [SYNC_SESSION_NAMES]
 [SESSIONS]
-"DefaultSession" "C:\WorkSpace\gradlab\gradlab\DefaultSession.hsf" 0 
-"JLink" "C:\WorkSpace\gradlab\gradlab\JLink.hsf" 0 
+"DefaultSession" "D:\Embedded\LABS\Motor\gradlab\DefaultSession.hsf" 0 
+"JLink" "D:\Embedded\LABS\Motor\gradlab\JLink.hsf" 0 
 [GENERAL_DATA_SESSION_DefaultSession]
 [GENERAL_DATA_SESSION_JLink]
 [OPTIONS_Debug_Renesas OptLinker]
 "Single Shot" "05cd14af3af21d10" 5 
 [OPTIONS_Debug_Renesas RX Assembler]
 "Assembly source file" "07d4199db03fcc10" 4 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\lowlvl.src" "08bf5be9e03fcc10" 4 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\lowlvl.src" "08bf5be9e03fcc10" 4 
 "Linkage symbol file" "07d4199db03fcc10" 4 
 [OPTIONS_Debug_Renesas RX C/C++ Compiler]
 "C source file" "02ae5226013fcc10" 2 
 "C++ source file" "02ae5226013fcc10" 3 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\dbsct.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\flash_options.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\hwsetup.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\lcd.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\lowsrc.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\resetprg.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\sbrk.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_bsp\board\rdkrx63n\vecttbl.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_glyph\src\glyph\drivers\st7579_lcd.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_glyph\src\glyph\fonts\font_8x8.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_glyph\src\glyph\glyph.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_glyph\src\r_glyph.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_glyph\src\r_glyph_register.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\r_rspi_rx600\src\r_rspi_rx600.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\src\S12ADC.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\src\cmt_periodic_multi.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\src\customled.c" "076c5a4c14c21d10" 2 
-"C:\WorkSpace\gradlab\gradlab\src\flash_led.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\src\int.c" "0198530df9f21d10" 2 
-"C:\WorkSpace\gradlab\gradlab\src\timer_adc.c" "02ae5226013fcc10" 2 
-"C:\WorkSpace\gradlab\gradlab\src\tutorial_main.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\dbsct.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\flash_options.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\hwsetup.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\lcd.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\lowsrc.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\resetprg.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\sbrk.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_bsp\board\rdkrx63n\vecttbl.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_glyph\src\glyph\drivers\st7579_lcd.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_glyph\src\glyph\fonts\font_8x8.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_glyph\src\glyph\glyph.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_glyph\src\r_glyph.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_glyph\src\r_glyph_register.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\r_rspi_rx600\src\r_rspi_rx600.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\S12ADC.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\cmt_periodic_multi.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\customled.c" "076c5a4c14c21d10" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\flash_led.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\int.c" "0198530df9f21d10" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\timer_adc.c" "02ae5226013fcc10" 2 
+"D:\Embedded\LABS\Motor\gradlab\src\tutorial_main.c" "02ae5226013fcc10" 2 
 [OPTIONS_Debug_Renesas RX C/C++ Library Generator]
 "Single Shot" "0b171189313fcc10" 1 
 [OPTIONS_Debug_Renesas RX Configurator]
