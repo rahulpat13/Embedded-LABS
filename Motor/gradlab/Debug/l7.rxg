@@ -1,0 +1,4 @@
+-cpu=rx600
+-output="C:\WorkSpace\l7\l7\Debug\l7.lib"
+-lang=c99
+-head=runtime,stdio,stdlib,string

@@ -196,136 +196,11 @@ void main(void)
 
     while (1)
     {	
-		//LED_Off(0);
+		//Check for temperature, if below threshold then go through the cases,
+		//If the temperature is over the threshold, then Switch off the motor
 		temperaturevalue = thermal_sensor_read();
-		if(temperaturevalue < 280)
+		if(temperaturevalue < 400)
 {
-	/*	if(waveDriveFlag == 1){
-			lcd_display(LCD_LINE3, "Wave Drive");
-	        switch(count){
-	            case 1: 
-					LED_Off(0);
-					//LED_On(4);
-					//LED_On(5);
-
-	                phase1_ON();
-	                break;
-	            case 3:
-					//LED_Off(0);
-					LED_On(6);
-					LED_On(7);
-	            //    phase2_ON();
-	                //phase1_OFF();
-	                break;
-	            case 5:
-					//LED_Off(0);
-	                LED_On(8);
-					LED_On(9);
-				//	phase3_ON();
-	                //phase2_OFF();
-	                break;
-	            case 7:
-					//LED_Off(0);
-					LED_On(10);
-					LED_On(11);
-
-	              //  phase4_ON();
-	                //phase3_OFF();
-	                break;
-	            case 9:
-					//LED_Off(0);
-					LED_On(12);
-					LED_On(13);
-
-	               // phase5_ON();
-	                //phase4_OFF();
-	                break;
-	            case 11:
-					//LED_Off(0);
-					LED_On(14);
-					LED_On(15);
-
-	                //phase6_ON();
-	                //phase5_OFF();
-	                break;
-				default:
-	            	break;
-
-	        }
-		}
-		
-		if(fullStepFlag == 1){
-			lcd_display(LCD_LINE3, "Full Step");
-	        switch(count){
-	            case 1: 
-					//LED_Off(0);
-					LED_On(4);
-					LED_On(5);
-					LED_On(6);
-					LED_On(7);
-
-					
-	                //phase1_ON();
-					//phase2_ON();
-	                break;
-	            case 3:
-					//LED_Off(0);
-					LED_On(6);
-					LED_On(7);
-					LED_On(8);
-					LED_On(9);
-	               // phase2_ON();
-				//	phase3_ON();
-	                //phase1_OFF();
-	                break;
-	            case 5:
-					//LED_Off(0);
-					LED_On(8);
-					LED_On(9);
-					LED_On(10);
-					LED_On(11);
-	                //phase3_ON();
-					//phase4_ON();
-	                //phase2_OFF();
-	                break;
-	            case 7:
-					//LED_Off(0);
-					LED_On(10);
-					LED_On(11);
-					LED_On(12);
-					LED_On(13);
-	          //      phase4_ON();
-				//	phase5_ON();
-	                //phase3_OFF();
-	                break;
-	            case 9:
-					//LED_Off(0);
-					LED_On(12);
-					LED_On(13);
-					LED_On(14);
-					LED_On(15);
-//	                phase5_ON();
-//					phase6_ON();
-	               // phase4_OFF();
-	                break;
-	            case 11:
-					//LED_Off(0);
-					LED_On(14);
-					LED_On(15);
-					LED_On(4);
-					LED_On(5);
-//	                phase6_ON();
-//					phase1_ON();
-	                //phase5_OFF();
-	                break;
-				default:
-	            	break;
-
-	        }
-		}
-*/
-      //  if(halfStepFlag == 1){
-//			lcd_display(LCD_LINE3, "Half Step");
             switch(count){
                 case 1: 
                     LED_Off(0);
@@ -384,7 +259,7 @@ void main(void)
                 default:
                     break;
             }
-      //  }
+       
 		
 		}
 	else{

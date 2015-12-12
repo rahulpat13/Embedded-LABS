@@ -3,12 +3,12 @@
 [DATABASE_VERSION]
 "11.0" 
 [WORKSPACE_DETAILS]
-"gradlab" "D:\Embedded\LABS\Motor" "D:\Embedded\LABS\Motor\gradlab.hws" "RX" "Renesas RX Standard" 
+"gradlab" "C:\WorkSpace\gradlab" "C:\WorkSpace\gradlab\gradlab.hws" "RX" "Renesas RX Standard" 
 [SHARED_WORKSPACE_CONTROL_STATUS]
 "" "" "" 
 "" "" "" 
 [PROJECTS]
-"gradlab" "D:\Embedded\LABS\Motor\gradlab" "D:\Embedded\LABS\Motor\gradlab\gradlab.hwp" 0 
+"gradlab" "C:\WorkSpace\gradlab\gradlab" "C:\WorkSpace\gradlab\gradlab\gradlab.hwp" 0 
 [INFORMATION]
 "No workspace information available" 
 [SCRAP]

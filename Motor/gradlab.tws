@@ -7,7 +7,27 @@
 [GENERAL_DATA]
 [BREAKPOINTS]
 [OPEN_WORKSPACE_FILES]
+"C:\WorkSpace\gradlab\gradlab\r_riic_rx600\src\r_riic_rx600.h" 
+"C:\WorkSpace\gradlab\gradlab\r_rspi_rx600\src\r_rspi_rx600.c" 
+"C:\WorkSpace\gradlab\gradlab\src\flash_led.c" 
+"C:\WorkSpace\gradlab\gradlab\src\int.c" 
+"C:\WorkSpace\gradlab\gradlab\src\int.h" 
+"C:\WorkSpace\gradlab\gradlab\src\r_riic_rx600_master.c" 
+"C:\WorkSpace\gradlab\gradlab\src\tutorial_main.c" 
+"C:\WorkSpace\tempdemo\tempdemo\src\riic_master_main.c" 
+"C:\WorkSpace\tempdemo\tempdemo\src\riic_master_main.h" 
+"C:\WorkSpace\tempdemo\tempdemo\src\thermal_sensor_demo.c" 
 [WORKSPACE_FILE_STATES]
+"C:\WorkSpace\gradlab\gradlab\r_riic_rx600\src\r_riic_rx600.h" 104 104 831 221 0 3 
+"C:\WorkSpace\gradlab\gradlab\r_rspi_rx600\src\r_rspi_rx600.c" 104 104 901 216 0 9 
+"C:\WorkSpace\gradlab\gradlab\src\flash_led.c" 52 52 831 221 0 7 
+"C:\WorkSpace\gradlab\gradlab\src\int.c" 0 0 951 364 0 1 
+"C:\WorkSpace\gradlab\gradlab\src\int.h" 104 104 887 221 0 2 
+"C:\WorkSpace\gradlab\gradlab\src\r_riic_rx600_master.c" -8 -31 1021 378 1 8 
+"C:\WorkSpace\gradlab\gradlab\src\tutorial_main.c" 0 0 951 345 0 0 
+"C:\WorkSpace\tempdemo\tempdemo\src\riic_master_main.c" 0 0 951 364 0 6 
+"C:\WorkSpace\tempdemo\tempdemo\src\riic_master_main.h" 26 26 831 221 0 5 
+"C:\WorkSpace\tempdemo\tempdemo\src\thermal_sensor_demo.c" 0 0 831 221 0 4 
 [LOADED_PROJECTS]
 "gradlab" 
 [END]

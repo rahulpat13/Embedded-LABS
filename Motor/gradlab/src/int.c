@@ -105,7 +105,10 @@ void sw1_isr (void){
 	waveDriveFlag = 1;
 	fullStepFlag = 0;
 	halfStepFlag = 0;
-	count = 1;
+//	count = 1;
+	if(count % 2 == 0){
+		count = count + 1;
+	}
 	lcd_display(LCD_LINE3, "Wave Drive");
 }
 
@@ -116,7 +119,9 @@ void sw2_isr (void){
 	fullStepFlag = 1;
 	halfStepFlag = 0;
 //	count = 1;
-	count = 2;
+	if(count % 2 == 1){
+		count = count + 1;
+	}
 	lcd_display(LCD_LINE3, "Full Step");
 }
 
@@ -125,6 +130,6 @@ void sw3_isr (void){
 	waveDriveFlag = 0;
 	fullStepFlag = 0;
 	halfStepFlag = 1;
-	count = 1;
+//	count = 1;
 	lcd_display(LCD_LINE3, "Half Step");
 }

@@ -1,0 +1,97 @@
+Optimizing Linkage Editor (V.10.02.00.000)        11-Dec-2015 15:00:00
+
+*** Options ***
+
+-subcommand=C:\WorkSpace\l7\l7\Debug\l7.hlk
+-noprelink
+-rom=D=R,D_1=R_1,D_2=R_2
+-nomessage
+-vect=_undefined_interrupt_source_isr
+-list="C:\WorkSpace\l7\l7\Debug\l7.map"
+-nooptimize
+-start=SI,SU,B_1,R_1,B_2,R_2,B,R/00,C_1,C_2,C,C$*,L*,D*,P,W*/0FFF80000,FIXEDVECT/0FFFFFF90
+-nologo
+-input="C:\WorkSpace\l7\l7\Debug\cmt_periodic_multi.obj"
+-input="C:\WorkSpace\l7\l7\Debug\customled.obj"
+-input="C:\WorkSpace\l7\l7\Debug\dbsct.obj"
+-input="C:\WorkSpace\l7\l7\Debug\flash_led.obj"
+-input="C:\WorkSpace\l7\l7\Debug\flash_options.obj"
+-input="C:\WorkSpace\l7\l7\Debug\font_8x8.obj"
+-input="C:\WorkSpace\l7\l7\Debug\glyph.obj"
+-input="C:\WorkSpace\l7\l7\Debug\hwsetup.obj"
+-input="C:\WorkSpace\l7\l7\Debug\int.obj"
+-input="C:\WorkSpace\l7\l7\Debug\lcd.obj"
+-input="C:\WorkSpace\l7\l7\Debug\lowlvl.obj"
+-input="C:\WorkSpace\l7\l7\Debug\lowsrc.obj"
+-input="C:\WorkSpace\l7\l7\Debug\r_glyph.obj"
+-input="C:\WorkSpace\l7\l7\Debug\r_glyph_register.obj"
+-input="C:\WorkSpace\l7\l7\Debug\r_riic_rx600.obj"
+-input="C:\WorkSpace\l7\l7\Debug\r_riic_rx600_master.obj"
+-input="C:\WorkSpace\l7\l7\Debug\r_rspi_rx600.obj"
+-input="C:\WorkSpace\l7\l7\Debug\resetprg.obj"
+-input="C:\WorkSpace\l7\l7\Debug\S12ADC.obj"
+-input="C:\WorkSpace\l7\l7\Debug\sbrk.obj"
+-input="C:\WorkSpace\l7\l7\Debug\st7579_lcd.obj"
+-input="C:\WorkSpace\l7\l7\Debug\temp_sensor.obj"
+-input="C:\WorkSpace\l7\l7\Debug\tutorial_main.obj"
+-input="C:\WorkSpace\l7\l7\Debug\vecttbl.obj"
+-library="C:\WorkSpace\l7\l7\Debug\l7.lib"
+-output="C:\WorkSpace\l7\l7\Debug\l7.abs"
+-end
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SI
+                                  00000000  000003ff       400   4
+SU
+                                  00000400  000013ff      1000   4
+B_1
+                                  00001400  00001427        28   1
+R_1
+                                  00001428  00001490        69   1
+B_2
+                                  00001492  00001492         0   2
+R_2
+                                  00001492  00001492         0   2
+B
+                                  00001494  000018eb       458   4
+R
+                                  000018ec  00001fa3       6b8   4
+$ADDR_C_FF7FFFE8
+                                  ff7fffe8  ff7fffff        18   1
+C_1
+                                  fff80000  fff80adb       adc   1
+C_2
+                                  fff80adc  fff80cdd       202   2
+C
+                                  fff80ce0  fff80d97        b8   4
+C$DSEC
+                                  fff80d98  fff80dbb        24   4
+C$BSEC
+                                  fff80dbc  fff80dd3        18   4
+C$VECT
+                                  fff80dd4  fff811d3       400   4
+L
+                                  fff811d4  fff81318       145   4
+D
+                                  fff8131c  fff819d3       6b8   4
+D_2
+                                  fff819d4  fff819d4         0   2
+D_1
+                                  fff819d4  fff81a3c        69   1
+P
+                                  fff81a3d  fff866a9      4c6d   1
+W
+                                  fff866ac  fff866ac         0   4
+W_1
+                                  fff866ac  fff866ac         0   1
+W_2
+                                  fff866ac  fff867cf       124   2
+$ADDR_C_FFFFFF80
+                                  ffffff80  ffffff8f        10   1
+FIXEDVECT
+                                  ffffff90  ffffffff        70   4
